@@ -11,13 +11,14 @@ In particular, the invariant mass of the $t\bar{t}t\bar{t}$ system, $m_{4t}$, pr
 In these scenarios, modifications of the interaction structure can lead to characteristic enhancements in the high-mass region of the $m_{4t}$ spectrum, while inclusive cross-section measurements alone may exhibit limited discriminating power. 
 Differential observables therefore offer complementary and potentially more sensitive probes of new interactions involving the top quark.
 
-Motivated by these considerations, this chapter develops the reconstruction and unfolding framework required for differential measurements of $t\bar{t}t\bar{t}$ production. 
-The following sections describe the event reconstruction strategy for the $t\bar{t}t\bar{t}$ system and the profile likelihood unfolding approach used to extract parton-level differential observables.
+Motivated by these considerations, this chapter develops and validates an end-to-end strategy for differential measurements of $t\bar{t}t\bar{t}$ production in Run~3. 
+The study focuses on the 2LSS signal region and uses the parton-level $m_{4t}$ distribution as the main benchmark observable, for which the reconstruction, detector-response modelling, and profile likelihood unfolding procedures are established and tested using simulated samples corresponding to the partial Run~3 dataset. 
+This provides a concrete methodological basis for a future partial Run~3 differential measurement and, subsequently, for a full Run~3 differential analysis.
 
 \section{Study setup}
 
 This section summarises the analysis configuration used for the differential $t\bar{t}t\bar{t}$ study presented in this chapter. 
-The study is based on simulated samples and a simplified event selection designed to capture the key experimental features of the $t\bar{t}t\bar{t}$ final state while maintaining sufficient statistical power for method validation. 
+The study is based on simulated samples and a simplified event selection designed to capture the key experimental features of the $t\bar{t}t\bar{t}$ final state while maintaining sufficient statistical power for method validation and for the development of the partial Run~3 measurement strategy. 
 The same configuration is used consistently throughout the reconstruction and unfolding studies described in the following sections.
 
 \subsection{Data and simulated samples}
@@ -574,9 +575,9 @@ The parton-level definition also avoids ambiguities associated with particle-lev
 At reconstruction level, a proxy observable $m_{4t}^{\text{reco}}$ is constructed from the reconstructed top-quark candidates obtained through the workflow described in Section~\ref{sec:top_reco}. 
 The reconstructed distribution serves as the measured observable entering the unfolding procedure.
 
-In addition to the parton-level invariant mass, exploratory studies have been performed for several particle-level observables, including the scalar sum of transverse momenta $H_T$ and the leading-lepton transverse momentum. 
-These studies illustrate the flexibility of the unfolding framework for different observables. 
-However, as the emphasis of this thesis is on the development and validation of the reconstruction and unfolding methodology, detailed particle-level results are not presented here.
+In addition to the parton-level invariant mass, the same unfolding framework has also been applied to several particle-level observables, including the scalar sum of transverse momenta $H_T$ and the leading-lepton transverse momentum. 
+These observables do not require the dedicated four-top reconstruction developed for the parton-level $m_{4t}$ measurement, but they can be treated consistently within the same statistical framework. 
+While detailed results are not shown here, the corresponding binning, regularisation, and stability tests can be established efficiently within the existing unfolding workflow.
 
 \subsection{Profile Likelihood Unfolding Formalism}
 
@@ -937,9 +938,9 @@ Since the detector response and templates are derived from simulated events, the
 If the true spectrum deviates from this prediction, the unfolded result may be biased towards the Monte Carlo expectation. 
 The stress test therefore examines whether such shape distortions can be correctly recovered by the unfolding procedure.
 
-To probe this potential bias, pseudo-data are constructed by introducing controlled distortions in the truth-level $m_{4t}$ spectrum. 
+To probe this potential bias, pseudo-data are constructed by introducing controlled distortions in the truth-level and reconstruction-level $m_{4t}$ spectrum. 
 This is achieved by reweighting events according to a linear function of the truth-level $m_{4t}$ value. 
-The resulting weight is applied to the corresponding reconstructed event, producing distorted pseudo-data distributions at reconstruction level. 
+The resulting weight is applied to the corresponding reconstructed event, producing distorted pseudo-data distributions at reconstruction-level. 
 The pseudo-data include the expected background contributions and the dominant systematic uncertainties considered in this study, thereby approximating the conditions of the nominal fit.
 
 The truth-level reweighting function is defined as
@@ -1033,17 +1034,21 @@ The same distorted pseudo-data configurations as in Fig.~\ref{fig:stress_test_no
 
 \section{Summary}
 
-This chapter presents the reconstruction and unfolding framework developed for differential measurements of $t\bar{t}t\bar{t}$ production in the 2LSS channel. 
-The goal of this study is to enable measurements of observables such as the $t\bar{t}t\bar{t}$ invariant mass at parton level, which provide enhanced sensitivity to the underlying production dynamics and potential deviations from the Standard Model.
+This chapter presents an end-to-end reconstruction and unfolding strategy for differential measurements of $t\bar{t}t\bar{t}$ production in the 2LSS channel. 
+The study is centred on the parton-level $m_{4t}$ observable, which is particularly sensitive to the underlying energy scale of the event and therefore provides strong motivation for future precision studies of the production dynamics and possible deviations from the Standard Model.
 
-To achieve this, a dedicated event reconstruction strategy has been developed. 
-The assignment of reconstructed objects to the four top-quark decay chains is performed using the hypergraph-based framework HyPER, which naturally represents the multi-body structure of hadronic top decays while allowing leptonic decay chains to be reconstructed through jet–lepton associations. 
-The missing neutrino momenta are subsequently inferred using either the analytic NW method or the generative $\nu^2$-Flows approach. 
-Together, these components provide a consistent reconstruction of the four top-quark four-momenta and enable the construction of reconstructed observables such as $m_{4t}$.
+To enable such a measurement, a dedicated event reconstruction framework has been established. 
+The assignment of reconstructed objects to the four top-quark decay chains is performed using the hypergraph-based framework HyPER, while the neutrino kinematics in the dileptonic system are reconstructed using either the analytic NW method or the generative $\nu^2$-Flows approach. 
+Their performance has been studied in detail, and the HyPER + NW workflow is selected as the nominal reconstruction strategy based on its improved behaviour in angular reconstruction and reduced migration in the reconstructed $m_{4t}$ spectrum.
+Based on this reconstruction, a profile likelihood unfolding framework has been developed for the extraction of parton-level differential observables. 
+A dedicated binning strategy, detector-response model, and regularisation procedure are constructed for the partial Run~3 dataset, and extensive validation studies, including closure, pull, and stress tests, demonstrate that the unfolding configuration provides stable and unbiased results within the scope of the present study.
 
-Based on the reconstructed event kinematics, the differential cross section is extracted using the profile likelihood unfolding approach. 
-The unfolding is formulated within the same likelihood framework as the inclusive analysis, with independent signal-strength parameters assigned to each truth bin. 
-A dedicated binning strategy and detector response model are constructed, and regularisation is introduced to stabilise the unfolding in the presence of limited statistics. 
-Extensive validation studies, including closure, pull, and stress tests, demonstrate that the unfolding configuration provides stable and unbiased estimates of the underlying parton-level spectrum.
+Beyond the benchmark $m_{4t}$ analysis presented here, the same unfolding framework has also been applied to additional particle-level observables. 
+For such observables, the corresponding binning choice, regularisation configuration, and stability of the unfolding procedure can be established efficiently within the existing validation programme. 
+This illustrates that the framework developed in this chapter is not restricted to the benchmark parton-level measurement, but can also be applied consistently to a broader set of differential observables.
 
-The framework developed in this chapter therefore establishes the methodological basis for differential measurements of $t\bar{t}t\bar{t}$ production in Run~3 data.
+For a future partial Run~3 differential measurement, further developments will still be needed. 
+In particular, a more systematic study of observables with enhanced sensitivity to new-physics effects and EFT-induced distortions will be required in order to determine the most suitable set of final observables for the measurement. 
+In parallel, additional analysis regions will need to be included for improved background modelling, and dedicated studies of the impact of MVA-based event categorisation will be needed. 
+This measurement will provide an important stepping stone towards a subsequent full Run~3 differential analysis. 
+On that basis, the same framework will also provide a natural starting point for future combinations of Run~2 and Run~3 data.

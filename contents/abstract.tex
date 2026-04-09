@@ -2,26 +2,30 @@
 
 \begin{abstract}[zh]
 
-  粒子物理致力于研究组成宇宙的基本粒子及其相互作用，其中的标准模型是目前最为成功的理论框架，标准模型将所有已知的基本粒子和三种基本相互作用统一描述，并成功地由大量实验验证。
-  然而，实验上的许多现象如暗物质、暗能量、物质-反物质不对称性等尚无法由标准模型解释，模型本身也存在如层级问题、强CP问题等理论上的不足。
-  许多超出标准模型的理论试图解决这些问题，其中包括双希格斯双重态模型和有效场论等。同时，这些理论预言了新粒子与标准模型粒子之间的相互作用，为实验探索新物理提供了重要途径。
-  顶夸克作为标准模型中质量最大的基本粒子，其与希格斯场的强耦合使其成为新物理研究的关键探针。
+  粒子物理致力于研究组成宇宙的基本粒子及其相互作用，其中标准模型作为目前最为成功的理论框架，将所有已知的基本粒子和四种基本相互作用中的三种统一描述，并成功地由大量实验验证。
+  然而，暗物质、暗能量以及宇宙中正反物质不对称性等观测现象仍无法在标准模型框架内得到解释，模型本身也存在如层级问题、强CP问题等理论上的不足。
+  为此，人们提出了多种超出标准模型的新物理模型，例如双希格斯二重态模型和有效场论方法，这些理论同时预言了新粒子与标准模型粒子之间的相互作用，为实验探索新物理提供了重要途径。
+  顶夸克作为标准模型中质量最大的基本粒子，其与希格斯场的强耦合使之成为新物理研究的关键探针。
   四顶夸克产生过程是标准模型中极为罕见的反应之一，该过程于2023年首次被ATLAS实验观测，测量结果在不确定度范围内与标准模型预言一致，但中心值的偏高仍为新物理效应留下了潜在空间。
 
-  本论文基于大型强子对撞机上ATLAS实验在$\sqrt{s}=13~\mathrm{TeV}$下收集的139~fb$^{-1}$ Run~2数据，在单轻子及双反电荷轻子末态中开展四顶夸克事例的研究，
-  重点搜索双希格斯双重态模型中的重标量粒子（$H/A$）以及色八重态标量粒子（$S_8$）所产生的四顶夸克信号。
+  本论文基于大型强子对撞机上ATLAS实验在$\sqrt{s}=13~\mathrm{TeV}$下收集的139~fb$^{-1}$ Run~2数据，在单轻子及双反电荷轻子末态中寻找双希格斯二重态模型中的重标量粒子（$H/A$）以及色八重态标量粒子（$S_8$）所产生的四顶夸克信号。
   针对主要背景$t\bar{t}+\text{jets}$，分析采用基于数据驱动的味成分重缩放方法以及基于神经网络的多维动力学重加权进行建模修正。
-  同时，引入质量参数化的图神经网络以提升信号与背景的区分能力，并与双同电荷轻子及多轻子末态分析结果进行联合拟合。
+  同时，引入质量参数化的图神经网络以提升信号与背景的区分能力，并与双同电荷轻子及多轻子末态分析结果进行联合拟合获得最优搜索敏感度。
   在95\%置信水平下，对于质量为400~GeV和1000~GeV的$H/A$，分别得到$t\bar{t}H/A \to t\bar{t}t\bar{t}$过程的截面上限为14~fb和5.0~fb。
   在$H$与$A$共同贡献的假设下，对应排除$\tan\beta < 1.7$和$0.7$的参数空间。同时，在$S_8S_8 \to t\bar{t}t\bar{t}$的搜索中排除了质量低于1.3~TeV的$S_8$。
   基于高亮度大型强子对撞机（HL-LHC）的扩展研究表明，在$3~\mathrm{ab}^{-1}$、$\sqrt{s}=14~\mathrm{TeV}$条件下，对于质量超过1~TeV的新粒子，其截面灵敏度可提升至1~fb以下。
 
-  为进一步提升四顶夸克过程的物理测量能力，本文构建了适用于Run~3数据的微分截面测量框架。
-  该框架基于图神经网络实现四顶夸克衰变链的重建，并结合解析方法或生成模型对中微子动量进行推断，从而重建部分子层级观测量，如四顶夸克不变质量$m_{4t}$。
-  在此基础上，采用基于剖面似然函数的展开方法提取微分截面，并系统研究了正则化策略及方法稳健性。该框架为未来四顶夸克微分测量提供了系统的方法学基础。
+  为进一步提升四顶夸克过程的物理测量能力，本文进一步讨论了基于部分Run~3数据的事件重建与微分截面测量。
+  针对末态中四个顶夸克衰变链的高度组合学复杂性，引入基于图-超图混合神经网络的重建策略，将重建对象有效匹配至四个顶夸克的衰变链中。
+  并结合解析方法或机器学习技术重建多个中微子的运动学信息，从而重建部分子层级的可观测量，如四顶夸克不变质量 $m_{4t}$ 及其他对新物理敏感的高能变量。
+  该方法在同电荷双轻子道中实现了约60\%的顶夸克完全匹配效率，$m_{4t}$ 在真值与重建值之间的相关性约为0.6，显著优于随机分配方法。
+  在此基础上，采用基于剖面似然函数的展开方法提取微分截面，并系统研究了正则化策略以确保在统计量有限情况下的拟合稳定性，
+  且进行了一系列方法鲁棒性检验。此分析为未来四顶夸克微分测量提供了系统的方法学基础。
 
-  此外，本文还开展了与ATLAS阻性板室（RPC）探测器相关的研究工作。包括基于探测器控制系统数据开发自动化性能监控工具，以及参与Phase-II升级相关的读出板设计与质量控制测试研究。
-  同时，通过有限元方法对气体流动与电场分布进行模拟，评估结构参数对探测器性能的影响，为未来优化设计提供参考。
+  此外，本文还开展了与ATLAS阻性板室（RPC）探测器相关的研究工作。包括基于探测器控制系统数据开发自动化监测工具，实现了Run~3取数期间探测器性能的近实时监控与异常行为识别。
+  针对Phase-II升级，开展了读出板生产与质量控制研究，以及阻性板室气隙在高亮度LHC高计数率条件下的老化情况研究。
+  同时，进行了基于有限元模拟的探测器研发，模拟气体流动、电场分布及电极形变以优化腔室设计。优化后的垫片构型可将垫片数量减少约24\%，从而降低非灵敏区比例，
+  并在改善了气体流动均匀性的情况下保持电极形变在可接受范围，基于优化设计生产的探测器在宇宙线测试中达到95\%以上的探测效率。
 
 \end{abstract}
 
@@ -31,7 +35,7 @@
   The Standard Model (SM) provides a remarkably successful theoretical framework, describing all known elementary particles and three of the four fundamental forces, and has been extensively validated by experimental measurements. 
   However, several observations, such as dark matter, dark energy, and the matter--antimatter asymmetry of the Universe, remain unexplained within the SM. 
   In addition, the SM faces theoretical challenges, including the hierarchy problem and the strong CP problem. 
-  Various extensions of the SM, such as Two-Higgs-Doublet Models (2HDM) and Effective Field Theory (EFT) approaches, have been proposed to address these issues, often predicting new particles with enhanced couplings to the top quark.
+  Various extensions of the SM, such as Two-Higgs-Doublet Models (2HDM) and Effective Field Theory (EFT) approaches, have been proposed to address these issues, often predicting new particles with couplings to the SM particles.
 
   As the heaviest known elementary particle, the top quark plays a central role in many beyond-the-Standard-Model scenarios due to its strong coupling to the Higgs sector. 
   The production of four top quarks is a particularly rare process in the SM and was observed for the first time by the ATLAS experiment in 2023. 
@@ -50,9 +54,9 @@
   For $S_8$ pair production, masses below 1.3~TeV are excluded. 
   Projections to the High-Luminosity LHC (HL-LHC) indicate that, with $3~\mathrm{ab}^{-1}$ of data at $\sqrt{s}=14~\mathrm{TeV}$, cross-section sensitivities below 1~fb can be achieved for heavy resonance masses above 1~TeV.
 
-  To further exploit the physics potential of $t\bar{t}t\bar{t}$ production, a reconstruction and unfolding framework is developed for differential measurements in Run~3 data.
+  To further exploit the physics potential of $t\bar{t}t\bar{t}$ production, a reconstruction and unfolding framework is developed for differential measurements in partial Run~3 data.
   A dedicated reconstruction strategy based on a blended graph–hypergraph neural network framework is introduced to assign reconstructed objects to the four top-quark decay chains, addressing the severe combinatorial complexity of the final state.
-  The kinematics of multiple neutrinos are inferred using both analytic techniques and machine-learning-based approaches, enabling the reconstruction of parton-level observables such as the $t\bar{t}t\bar{t}$ invariant mass $m_{4t}$ and other high-energy variables sensitive to new physics effects.
+  The kinematics of multiple neutrinos are inferred using analytic technique or machine-learning-based approach, enabling the reconstruction of parton-level observables such as the $t\bar{t}t\bar{t}$ invariant mass $m_{4t}$ and other high-energy variables sensitive to new physics effects.
   Despite the intrinsic ambiguity of the topology, the method achieves matching efficiencies of about 60\% for fully reconstructed top quarks, with a truth–reconstruction correlation of approximately 0.6 for $m_{4t}$ in the same-sign dilepton topology, demonstrating a significant improvement over random assignment.
   Differential cross sections are extracted using a profile likelihood unfolding approach, with regularisation applied to ensure stability in the presence of limited statistics.
   Extensive validation studies demonstrate the robustness and statistical reliability of the full reconstruction-to-unfolding workflow.
