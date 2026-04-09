@@ -20,9 +20,16 @@
   并结合解析方法或机器学习技术重建多个中微子的运动学信息，从而重建部分子层级的可观测量，如四顶夸克不变质量 $m_{4t}$ 及其他对新物理敏感的高能变量。
   该方法在同电荷双轻子道中实现了约60\%的顶夸克完全匹配效率，$m_{4t}$ 在真值与重建值之间的相关性约为0.6，显著优于随机分配方法。
   在此基础上，采用基于剖面似然函数的展开方法提取微分截面，并系统研究了正则化策略以确保在统计量有限情况下的拟合稳定性，
-  且进行了一系列方法鲁棒性检验。此分析为未来四顶夸克微分测量提供了系统的方法学基础。
+  此分析为未来四顶夸克微分测量提供了系统的方法学基础。
 
-  此外，本文还开展了与ATLAS阻性板室（RPC）探测器相关的研究工作。包括基于探测器控制系统数据开发自动化监测工具，实现了Run~3取数期间探测器性能的近实时监控与异常行为识别。
+  为进一步提升四顶夸克过程的物理测量能力，本文基于部分Run~3数据建立并验证了事件重建方法与微分截面测量。
+  针对末态中四个顶夸克衰变链的高度组合学复杂性，引入基于图-超图混合神经网络的重建策略，将重建对象匹配至四个顶夸克衰变链，
+  并结合解析方法或机器学习方法重建多个中微子的运动学信息，从而重建部分子层级的可观测量，如四顶夸克不变质量 $m_{4t}$ 及其他对新物理敏感的高能变量。
+  该方法在双同电荷轻子道中实现了约60\%的顶夸克完全匹配效率，$m_{4t}$在真值与重建值之间的相关性约为0.6，显著优于随机分配方法。
+  在此基础上，采用基于剖面似然函数的展开方法提取微分信息，并系统研究了正则化策略以确保在统计量有限情况下的拟合稳定性，且进行了一系列方法鲁棒性检验。
+  该研究为未来基于部分Run~3数据的四顶夸克微分测量奠定了具体的方法学基础，并为后续完整Run~3分析提供了可扩展的框架。
+
+  此外，本论文还介绍了与ATLAS阻性板室（RPC）探测器相关的研究工作。包括基于探测器控制系统数据开发自动化监测工具，实现了Run~3取数期间探测器性能的近实时监控与异常行为识别。
   针对Phase-II升级，开展了读出板生产与质量控制研究，以及阻性板室气隙在高亮度LHC高计数率条件下的老化情况研究。
   同时，进行了基于有限元模拟的探测器研发，模拟气体流动、电场分布及电极形变以优化腔室设计。优化后的垫片构型可将垫片数量减少约24\%，从而降低非灵敏区比例，
   并在改善了气体流动均匀性的情况下保持电极形变在可接受范围，基于优化设计生产的探测器在宇宙线测试中达到95\%以上的探测效率。
@@ -54,12 +61,13 @@
   For $S_8$ pair production, masses below 1.3~TeV are excluded. 
   Projections to the High-Luminosity LHC (HL-LHC) indicate that, with $3~\mathrm{ab}^{-1}$ of data at $\sqrt{s}=14~\mathrm{TeV}$, cross-section sensitivities below 1~fb can be achieved for heavy resonance masses above 1~TeV.
 
-  To further exploit the physics potential of $t\bar{t}t\bar{t}$ production, a reconstruction and unfolding framework is developed for differential measurements in partial Run~3 data.
-  A dedicated reconstruction strategy based on a blended graph–hypergraph neural network framework is introduced to assign reconstructed objects to the four top-quark decay chains, addressing the severe combinatorial complexity of the final state.
-  The kinematics of multiple neutrinos are inferred using analytic technique or machine-learning-based approach, enabling the reconstruction of parton-level observables such as the $t\bar{t}t\bar{t}$ invariant mass $m_{4t}$ and other high-energy variables sensitive to new physics effects.
-  Despite the intrinsic ambiguity of the topology, the method achieves matching efficiencies of about 60\% for fully reconstructed top quarks, with a truth–reconstruction correlation of approximately 0.6 for $m_{4t}$ in the same-sign dilepton topology, demonstrating a significant improvement over random assignment.
-  Differential cross sections are extracted using a profile likelihood unfolding approach, with regularisation applied to ensure stability in the presence of limited statistics.
+  To further exploit the physics potential of $t\bar{t}t\bar{t}$ production, an end-to-end reconstruction and unfolding strategy is developed and validated for differential measurements based on partial Run~3 data. 
+  A dedicated blended graph--hypergraph neural-network framework is introduced to assign reconstructed objects to the four top-quark decay chains, addressing the severe combinatorial complexity of the final state. 
+  The kinematics of multiple neutrinos are then inferred using either analytic or machine-learning-based techniques, enabling the reconstruction of the benchmark parton-level observable $m_{4t}$, together with other high-energy variables sensitive to new-physics effects. 
+  In the same-sign dilepton topology, the method achieves matching efficiencies of about 60\% for fully reconstructed top quarks, with a truth--reconstruction correlation of approximately 0.6 for $m_{4t}$, significantly outperforming random assignment. 
+  Building on this reconstruction, differential cross sections are extracted using a profile-likelihood unfolding approach, and dedicated studies of regularisation are performed to ensure the stability of the fit in the presence of limited statistics.
   Extensive validation studies demonstrate the robustness and statistical reliability of the full reconstruction-to-unfolding workflow.
+  This study establishes a concrete methodological basis for a future partial Run~3 differential measurement and, subsequently, for a full Run~3 analysis.
 
   In addition, contributions to the ATLAS muon spectrometer are presented through work on Resistive Plate Chambers (RPCs).
   These include the development of automated monitoring tools based on Detector Control System data, enabling quasi-real-time tracking of detector performance and the identification of anomalous behaviour during Run~3 data taking.
