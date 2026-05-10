@@ -2,79 +2,127 @@
 
 \begin{abstract}[zh]
 
-  粒子物理致力于研究组成宇宙的基本粒子及其相互作用，其中标准模型作为目前最为成功的理论框架，将所有已知的基本粒子和四种基本相互作用中的三种统一描述，并成功地由大量实验验证。
-  然而，暗物质、暗能量以及宇宙中正反物质不对称性等观测现象仍无法在标准模型框架内得到解释，模型本身也存在如层级问题、强CP问题等理论上的不足。
-  为此，人们提出了多种超出标准模型的新物理模型，例如双希格斯二重态模型和有效场论方法，这些理论同时预言了新粒子与标准模型粒子之间的相互作用，为实验探索新物理提供了重要途径。
-  顶夸克作为标准模型中质量最大的基本粒子，其与希格斯场的强耦合使之成为新物理研究的关键探针。
-  四顶夸克产生过程是标准模型中极为罕见的反应之一，该过程于2023年首次被ATLAS实验观测，测量结果在不确定度范围内与标准模型预言一致，但中心值的偏高仍为新物理效应留下了潜在空间。
+  许多超出标准模型的理论框架预言了重共振粒子的存在，且这些粒子与顶夸克间有较强耦合。
+  例如双希格斯二重态模型中，额外的中性重希格斯玻色子 $H$ 和 $A$ 在较低 $\tan\beta$ 区域与顶夸克发生较强耦合，其主要衰变产物为 $t\bar{t}$ 对。
+  然而，直接通过 $gg\to H/A\to t\bar{t}$ 过程寻找此类共振时，信号过程会与标准模型过程产生显著干涉，而与顶夸克对伴随产生的 $t\bar{t}H/A$ 过程提供了一个重要的互补探针。
+  当 $H/A\to t\bar{t}$ 时，其表现为四顶夸克产生过程，该过程受信号--背景干涉效应的影响较小，同时也对其他可能增强四顶夸克产生率的亲顶夸克新粒子十分敏感。
+  此外，ATLAS实验对四顶夸克产生截面的测量中心值高于标准模型预言，对应约 $1.6\sigma$ 的轻微向上偏离，这进一步为在四顶夸克过程中寻找新物理贡献提供了动机。
 
   本论文基于大型强子对撞机上ATLAS实验在$\sqrt{s}=13~\mathrm{TeV}$下收集的139~fb$^{-1}$ Run~2数据，在单轻子及双反电荷轻子末态中寻找双希格斯二重态模型中的重标量粒子（$H/A$）以及色八重态标量粒子（$S_8$）所产生的四顶夸克信号。
-  针对主要背景$t\bar{t}+\text{jets}$，分析采用基于数据驱动的味成分重缩放方法以及基于神经网络的多维动力学重加权进行建模修正。
+  针对主要背景$t\bar{t}+\text{jets}$，分析采用基于数据驱动的味成分重缩放方法以及基于神经网络的多维动力学重加权对其进行建模修正。
   同时，引入质量参数化的图神经网络以提升信号与背景的区分能力，并与双同电荷轻子及多轻子末态分析结果进行联合拟合获得最优搜索敏感度。
-  在95\%置信水平下，对于质量为400~GeV和1000~GeV的$H/A$，分别得到$t\bar{t}H/A \to t\bar{t}t\bar{t}$过程的截面上限为14~fb和5.0~fb。
+  在95\%置信水平下，对于质量为400~GeV和1000~GeV的$H/A$，分别得到$t\bar{t}H/A \to t\bar{t}t\bar{t}$过程的截面上限为14~fb和5.0~fb，
+  与单轻子及双反电荷轻子道的联合使双同电荷轻子及多轻子道的解释灵敏度最高提升约19\%。
   在$H$与$A$共同贡献的假设下，对应排除$\tan\beta < 1.7$和$0.7$的参数空间。同时，在$S_8S_8 \to t\bar{t}t\bar{t}$的搜索中排除了质量低于1.3~TeV的$S_8$。
-  基于高亮度大型强子对撞机（HL-LHC）的扩展研究表明，在$3~\mathrm{ab}^{-1}$、$\sqrt{s}=14~\mathrm{TeV}$条件下，对于质量超过1~TeV的新粒子，其截面灵敏度可提升至1~fb以下。
+  基于高亮度大型强子对撞机的扩展研究表明，在$3~\mathrm{ab}^{-1}$、$\sqrt{s}=14~\mathrm{TeV}$条件下，对于质量超过1~TeV的重共振粒子，其截面灵敏度可提升至1~fb以下。
 
-  为进一步提升四顶夸克过程的物理测量能力，本文进一步讨论了基于部分Run~3数据的事件重建与微分截面测量。
-  针对末态中四个顶夸克衰变链的高度组合学复杂性，引入基于图-超图混合神经网络的重建策略，将重建对象有效匹配至四个顶夸克的衰变链中。
-  并结合解析方法或机器学习技术重建多个中微子的运动学信息，从而重建部分子层级的可观测量，如四顶夸克不变质量 $m_{4t}$ 及其他对新物理敏感的高能变量。
-  该方法在同电荷双轻子道中实现了约60\%的顶夸克完全匹配效率，$m_{4t}$ 在真值与重建值之间的相关性约为0.6，显著优于随机分配方法。
-  在此基础上，采用基于剖面似然函数的展开方法提取微分截面，并系统研究了正则化策略以确保在统计量有限情况下的拟合稳定性，
-  此分析为未来四顶夸克微分测量提供了系统的方法学基础。
-
-  为进一步提升四顶夸克过程的物理测量能力，本文基于部分Run~3数据建立并验证了事件重建方法与微分截面测量。
+  为进一步提升四顶夸克过程的物理测量能力，本文基于部分Run~3数据建立并验证了从重建到展开的完整微分散射截面测量分析流程。
   针对末态中四个顶夸克衰变链的高度组合学复杂性，引入基于图-超图混合神经网络的重建策略，将重建对象匹配至四个顶夸克衰变链，
   并结合解析方法或机器学习方法重建多个中微子的运动学信息，从而重建部分子层级的可观测量，如四顶夸克不变质量 $m_{4t}$ 及其他对新物理敏感的高能变量。
-  该方法在双同电荷轻子道中实现了约60\%的顶夸克完全匹配效率，$m_{4t}$在真值与重建值之间的相关性约为0.6，显著优于随机分配方法。
-  在此基础上，采用基于剖面似然函数的展开方法提取微分信息，并系统研究了正则化策略以确保在统计量有限情况下的拟合稳定性，且进行了一系列方法鲁棒性检验。
-  该研究为未来基于部分Run~3数据的四顶夸克微分测量奠定了具体的方法学基础，并为后续完整Run~3分析提供了可扩展的框架。
+  在双同电荷轻子道中，对于通过 $\Delta R$ 匹配的顶夸克衰变产物，该方法达到约60\%的分配效率，同时$m_{4t}$ 的真值与重建值之间的相关性约为0.6，为该复杂末态中的微分测量提供了基础。  
+  在此之上，采用基于剖面似然函数的展开方法测量微分截面，并系统研究了正则化策略以确保在统计量有限情况下的拟合稳定性，且进行了一系列方法鲁棒性检验。
+  该研究为未来基于部分Run~3数据的四顶夸克微分散射截面测量奠定了具体的方法学基础，并为后续完整Run~3分析提供了可扩展的框架。
 
-  此外，本论文还介绍了与ATLAS阻性板室（RPC）探测器相关的研究工作。包括基于探测器控制系统数据开发自动化监测工具，实现了Run~3取数期间探测器性能的近实时监控与异常行为识别。
+  稀有过程搜索和精密测量的灵敏度不仅依赖于先进的分析方法，也依赖于探测器系统长期稳定和高效的运行。
+  在此背景下，本文还介绍了与ATLAS缪子谱仪中阻性板室相关的研究工作。
+  包括基于探测器控制系统数据开发自动化监测工具，实现了Run~3取数期间探测器性能的近实时监控与异常行为识别。
   针对Phase-II升级，开展了读出板生产与质量控制研究，以及阻性板室气隙在高亮度LHC高计数率条件下的老化情况研究。
-  同时，进行了基于有限元模拟的探测器研发，模拟气体流动、电场分布及电极形变以优化腔室设计。优化后的垫片构型可将垫片数量减少约24\%，从而降低非灵敏区比例，
+  同时，进行了基于有限元模拟的探测器研发，通过模拟气体流动、电场分布及电极形变以优化腔室设计。优化后的垫片构型可将垫片数量减少约24\%，从而降低非灵敏区比例，
   并在改善了气体流动均匀性的情况下保持电极形变在可接受范围，基于优化设计生产的探测器在宇宙线测试中达到95\%以上的探测效率。
 
 \end{abstract}
 
 \begin{abstract}[en]
 
-  Particle physics aims to understand the fundamental constituents of matter and their interactions. 
-  The Standard Model (SM) provides a remarkably successful theoretical framework, describing all known elementary particles and three of the four fundamental forces, and has been extensively validated by experimental measurements. 
-  However, several observations, such as dark matter, dark energy, and the matter--antimatter asymmetry of the Universe, remain unexplained within the SM. 
-  In addition, the SM faces theoretical challenges, including the hierarchy problem and the strong CP problem. 
-  Various extensions of the SM, such as Two-Higgs-Doublet Models (2HDM) and Effective Field Theory (EFT) approaches, have been proposed to address these issues, often predicting new particles with couplings to the SM particles.
+  Heavy resonances with sizeable couplings to top quarks are predicted
+  in a wide range of beyond-the-Standard-Model scenarios. 
+  For instance, in Two-Higgs-Doublet Models (2HDM), the heavy neutral
+  Higgs bosons $H$ and $A$ can couple preferentially to top quarks at low
+  $\tan\beta$, leading to dominant $H/A\to t\bar{t}$ decays.
+  However, direct searches in the inclusive $gg\to H/A\to t\bar{t}$ channel are
+  strongly affected by interference with the Standard Model process,
+  motivating complementary searches in associated
+  $t\bar{t}H/A$ production with $H/A\to t\bar{t}$. 
+  The resulting $t\bar{t}t\bar{t}$ production is less affected by such
+  interference and is also sensitive to other top-philic new particles
+  that can enhance four-top production.
+  Moreover, the ATLAS experiment measured $t\bar{t}t\bar{t}$ production with a central
+  value above the Standard Model prediction, corresponding to a mild
+  upward deviation of about $1.6\sigma$. This provides additional
+  motivation to search for new-physics contributions to this process.
 
-  As the heaviest known elementary particle, the top quark plays a central role in many beyond-the-Standard-Model scenarios due to its strong coupling to the Higgs sector. 
-  The production of four top quarks is a particularly rare process in the SM and was observed for the first time by the ATLAS experiment in 2023. 
-  While the measured cross section is consistent with the SM prediction within uncertainties, the central value remains slightly elevated, leaving room for potential contributions from new physics.
+  This thesis presents a search for heavy resonances in
+  $t\bar{t}t\bar{t}$ productions using events with one lepton or two
+  opposite-sign leptons and high jet multiplicities. The analysis is
+  based on the full Run~2 dataset collected by the ATLAS experiment at
+  $\sqrt{s}=13~\mathrm{TeV}$, corresponding to an integrated luminosity of
+  139~fb$^{-1}$. The search targets heavy scalar and pseudoscalar
+  particles ($H/A$) in the context of 2HDM, produced in association with a
+  top-quark pair and decaying into $t\bar{t}$, as well as pair-produced
+  colour-octet scalars ($S_8$). The dominant
+  $t\bar{t}+\mathrm{jets}$ background is controlled using a data-driven
+  flavour-dependent normalisation and a neural-network-based
+  multidimensional kinematic reweighting. An $H/A$-mass parameterised
+  Graph Neural Network is employed to enhance the discrimination between
+  signal and background, and the results are combined with two
+  same-sign leptons or multilepton analyses. No significant excess
+  compatible with the targeted signal models is observed. Upper limits at
+  95\% confidence level are set on
+  $\sigma(pp \to t\bar{t}H/A)\times \mathcal{B}(H/A \to t\bar{t})$,
+  with values of 14~fb (5.0~fb) at 400~GeV (1000~GeV). The combination
+  with the one-lepton and opposite-sign dilepton channels improves the
+  sensitivity of the same-sign and multilepton interpretation by up to
+  19\%. In the scenario where both $H$ and $A$ contribute, values of
+  $\tan\beta$ below 1.7 and 0.7 are excluded for masses of 400~GeV and
+  1000~GeV, respectively. For $S_8$ pair production, masses below
+  1.3~TeV are excluded. Projections to the High-Luminosity LHC
+  (HL-LHC) indicate that, with $3~\mathrm{ab}^{-1}$ of data at
+  $\sqrt{s}=14~\mathrm{TeV}$, cross-section sensitivities below 1~fb can
+  be achieved for heavy resonance masses above 1~TeV.
 
-  This thesis presents a search for heavy resonance in $t\bar{t}t\bar{t}$ final states using events with one lepton or two opposite-sign leptons and high jet multiplicities. 
-  The analysis is based on the full Run~2 dataset collected by the ATLAS experiment at $\sqrt{s}=13~\mathrm{TeV}$, corresponding to an integrated luminosity of 139~fb$^{-1}$. 
-  The search targets heavy scalar and pseudoscalar particles ($H/A$) in the context of 2HDM, produced in association with a top-quark pair and decaying into $t\bar{t}$, as well as pair-produced colour-octet scalars ($S_8$). 
-  The dominant $t\bar{t}+\mathrm{jets}$ background is controlled using a data-driven flavour-dependent normalisation and a neural-network-based multidimensional kinematic reweighting. 
-  An $H/A$-mass parameterised Graph Neural Network is employed to enhance the discrimination between signal and background, and the results are combined with two same-sign leptons or multilepton analyses.
-  No significant deviation from the SM prediction is observed. 
-  Upper limits at 95\% confidence level are set on 
-  $\sigma(pp \to t\bar{t}H/A)\times \mathcal{B}(H/A \to t\bar{t})$, 
-  with values of 14~fb (5.0~fb) at 400~GeV (1000~GeV), improving upon the same-sign and multilepton channels by up to 19\%.
-  In the scenario where both $H$ and $A$ contribute, values of $\tan\beta$ below 1.7 and 0.7 are excluded for masses of 400~GeV and 1000~GeV, respectively. 
-  For $S_8$ pair production, masses below 1.3~TeV are excluded. 
-  Projections to the High-Luminosity LHC (HL-LHC) indicate that, with $3~\mathrm{ab}^{-1}$ of data at $\sqrt{s}=14~\mathrm{TeV}$, cross-section sensitivities below 1~fb can be achieved for heavy resonance masses above 1~TeV.
+  To further exploit the physics potential of $t\bar{t}t\bar{t}$
+  production, a full analysis chain from reconstruction to unfolding is
+  developed and validated for differential measurements based on partial
+  Run~3 data. A dedicated blended graph--hypergraph neural-network
+  framework is introduced to assign reconstructed objects to the four
+  top-quark decay chains, addressing the severe combinatorial complexity
+  of the final state. The kinematics of multiple neutrinos are then
+  inferred using either analytic or machine-learning-based techniques,
+  enabling the reconstruction of the benchmark parton-level observable
+  $m_{4t}$, together with other high-energy variables sensitive to
+  new-physics effects. In the same-sign dilepton topology, the method
+  achieves assignment efficiencies of about 60\% for fully
+  $\Delta R$-matched top decays, with a truth--reconstruction correlation
+  of approximately 0.6 for $m_{4t}$, providing a solid basis for
+  differential measurements in this challenging final state. Building on
+  this reconstruction, differential cross sections are extracted using a
+  profile-likelihood unfolding approach, and dedicated studies of
+  regularisation are performed to ensure the stability of the fit in the
+  presence of limited statistics. Extensive validation studies demonstrate
+  the robustness and statistical reliability of the full
+  reconstruction-to-unfolding workflow. This study establishes a concrete
+  methodological basis for a future partial Run~3 differential
+  measurement and, subsequently, for a full Run~3 analysis.
 
-  To further exploit the physics potential of $t\bar{t}t\bar{t}$ production, an end-to-end reconstruction and unfolding strategy is developed and validated for differential measurements based on partial Run~3 data. 
-  A dedicated blended graph--hypergraph neural-network framework is introduced to assign reconstructed objects to the four top-quark decay chains, addressing the severe combinatorial complexity of the final state. 
-  The kinematics of multiple neutrinos are then inferred using either analytic or machine-learning-based techniques, enabling the reconstruction of the benchmark parton-level observable $m_{4t}$, together with other high-energy variables sensitive to new-physics effects. 
-  In the same-sign dilepton topology, the method achieves matching efficiencies of about 60\% for fully reconstructed top quarks, with a truth--reconstruction correlation of approximately 0.6 for $m_{4t}$, significantly outperforming random assignment. 
-  Building on this reconstruction, differential cross sections are extracted using a profile-likelihood unfolding approach, and dedicated studies of regularisation are performed to ensure the stability of the fit in the presence of limited statistics.
-  Extensive validation studies demonstrate the robustness and statistical reliability of the full reconstruction-to-unfolding workflow.
-  This study establishes a concrete methodological basis for a future partial Run~3 differential measurement and, subsequently, for a full Run~3 analysis.
-
-  In addition, contributions to the ATLAS muon spectrometer are presented through work on Resistive Plate Chambers (RPCs).
-  These include the development of automated monitoring tools based on Detector Control System data, enabling quasi-real-time tracking of detector performance and the identification of anomalous behaviour during Run~3 data taking.
-  Studies in the context of the Phase-II upgrade are also performed, focusing on readout board production and quality control, as well as mechanical validation and conditioning of RPC gas gaps for operation under high-rate HL-LHC conditions.
-  In parallel, dedicated detector R\&D studies based on finite-element simulations of gas flow, electric field distributions, and electrode deformation are carried out to optimise chamber design.
-  An optimised spacer configuration is shown to reduce the number of spacers by about 24\%, thereby reducing inactive regions without compromising detector performance, with improved gas-flow uniformity, comparable electrode deformation, and detection efficiencies above 95\%.  
-  % Overall, this thesis demonstrates the strong potential of the $t\bar{t}t\bar{t}$ topology as a probe of both the Standard Model and new physics. 
-  % The combination of advanced analysis techniques, improved reconstruction methodologies, and detector developments provides a comprehensive framework for future studies at the LHC and the HL-LHC.
+  The sensitivity of rare-process searches and precision measurements at
+  the LHC relies not only on advanced analysis techniques, but also on the
+  stable and efficient operation of the detector systems. In this
+  context, this thesis also presents contributions to the ATLAS muon
+  spectrometer through work on Resistive Plate Chambers (RPCs). These
+  include the development of automated monitoring tools based on Detector
+  Control System data, enabling quasi-real-time tracking of detector
+  performance and the identification of anomalous behaviour during
+  Run~3 data taking. Studies in the context of the Phase-II upgrade are
+  also performed, focusing on readout board production and quality
+  control, as well as mechanical validation and conditioning of RPC gas
+  gaps for operation under high-rate HL-LHC conditions. In parallel,
+  dedicated detector R\&D studies based on finite-element simulations of
+  gas flow, electric field distributions, and electrode deformation are
+  carried out to optimise chamber design. An optimised spacer
+  configuration is shown to reduce the number of spacers by about 24\%,
+  thereby reducing inactive regions without compromising detector
+  performance. The design improves gas-flow uniformity, maintains
+  comparable electrode deformation, and achieves detection efficiencies
+  above 95\%.
 
 \end{abstract}

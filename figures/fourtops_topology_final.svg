@@ -9,7 +9,7 @@
    id="svg1"
    inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
    sodipodi:docname="fourtops_topology_final.svg"
-   inkscape:export-filename="fourtops_topology.pdf"
+   inkscape:export-filename="fourtops_topology.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,16 +28,22 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.1808793"
-     inkscape:cx="366.2525"
+     inkscape:cx="365.82909"
      inkscape:cy="284.95715"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="4024"
-     inkscape:window-y="441"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="5031"
+     inkscape:window-y="295"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
      id="defs1">
+    <rect
+       x="532.65393"
+       y="404.78311"
+       width="80.448527"
+       height="38.954023"
+       id="rect46" />
     <marker
        style="overflow:visible"
        id="ArrowWide"
@@ -624,34 +630,6 @@
            id="tspan42">2</tspan></tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;line-height:2;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:19.7795;display:inline;fill:#91cae8;fill-opacity:1;stroke:#91cae8;stroke-width:0.7;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="189.66736"
-       y="80.455666"
-       id="text25-3"
-       transform="translate(-155.42124,38.753289)"><tspan
-         x="189.66736"
-         y="80.455666"
-         id="tspan46"><tspan
-           style="font-family:Sans;-inkscape-font-specification:Sans"
-           id="tspan44">W</tspan><tspan
-           style="font-size:65%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';baseline-shift:sub"
-           id="tspan45">3</tspan></tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;line-height:2;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:19.7795;display:inline;fill:#5aaed6;fill-opacity:1;stroke:#5aaed6;stroke-width:0.7;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="189.66736"
-       y="80.455666"
-       id="text25-2"
-       transform="translate(-58.174062,38.752907)"><tspan
-         x="189.66736"
-         y="80.455666"
-         id="tspan49"><tspan
-           style="font-family:Sans;-inkscape-font-specification:'Sans, Normal'"
-           id="tspan47">W</tspan><tspan
-           style="font-size:65%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';baseline-shift:sub"
-           id="tspan48">4</tspan></tspan></text>
-    <text
-       xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;line-height:2;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:19.7795;display:inline;fill:#e35d6a;fill-opacity:1;stroke:#e35d6a;stroke-width:0.7;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        x="189.66736"
        y="80.455666"
@@ -659,11 +637,11 @@
        transform="translate(-149.39388,-25.076093)"><tspan
          x="189.66736"
          y="80.455666"
-         id="tspan52"><tspan
+         id="tspan46"><tspan
            style="font-family:Sans;-inkscape-font-specification:'Sans, Normal'"
-           id="tspan50">W</tspan><tspan
+           id="tspan44">W</tspan><tspan
            style="font-size:65%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';baseline-shift:sub"
-           id="tspan51">1</tspan></tspan></text>
+           id="tspan45">1</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:2;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#91cae8;fill-opacity:1;stroke:#91cae8;stroke-width:0.6;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -724,5 +702,46 @@
            style="font-size:22.5778px;fill:#f48892;fill-opacity:1;stroke:#f48892;stroke-width:0.6;stroke-dasharray:none;stroke-opacity:1">t</tspan><tspan
            style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI Italic';baseline-shift:sub;fill:#f48892;fill-opacity:1;stroke:#f48892;stroke-width:0.6;stroke-dasharray:none;stroke-opacity:1"
            id="tspan28-4-3">had2</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:57.4737;fill:#91cae8;fill-opacity:1;stroke:#91cae8;stroke-width:0.600001;stroke-opacity:1"
+       x="87.157867"
+       y="109.56348"
+       id="text44"
+       transform="translate(-54.221601,6.7216859)"><tspan
+         x="87.157867"
+         y="109.56348"
+         id="tspan48"><tspan
+           style="stroke-width:0.6"
+           id="tspan47">Edge1
+</tspan></tspan><tspan
+         x="87.157867"
+         y="118.03015"
+         id="tspan50"><tspan
+           style="stroke-width:0.6"
+           id="tspan49">Jet - Lepton </tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:57.4737;fill:#5aaed6;fill-opacity:1;stroke:#5aaed6;stroke-width:0.600001;stroke-opacity:1"
+       x="87.157867"
+       y="109.56348"
+       id="text44-8"
+       transform="translate(42.437729,6.7213851)"><tspan
+         x="87.157867"
+         y="109.56348"
+         id="tspan52"><tspan
+           style="stroke-width:0.6"
+           id="tspan51">Edge2
+</tspan></tspan><tspan
+         x="87.157867"
+         y="118.03015"
+         id="tspan54"><tspan
+           style="stroke-width:0.6"
+           id="tspan53">Jet - Lepton </tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text46"
+       style="fill:#e35d6a;text-orientation:auto;stroke-width:2.26771654;font-size:37.33333969px;-inkscape-font-specification:'Bodoni MT, Normal';font-family:'Bodoni MT';line-height:2;stroke:#e35d6a;text-align:start;writing-mode:lr-tb;direction:ltr;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect46)" />
   </g>
 </svg>

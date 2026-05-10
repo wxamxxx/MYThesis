@@ -1,6 +1,6 @@
 ﻿% !TEX root = ../main.tex
 
-\chapter{Search for Heavy-Resonance in $t\bar{t}t\bar{t}$ Final States}
+\chapter{Search for Heavy-Resonance in \tttthead{} Productions}
 \label{chap:BSMtttt}
 
 % =========================
@@ -32,44 +32,45 @@ $t\bar{t}$ invariant-mass spectrum~\cite{Gaemers:1984sj,Hajer:2015gka}.
 
 An alternative probe is the associated production of a heavy Higgs
 boson with a top-quark pair, followed by the decay $H/A \to t\bar{t}$,
-leading to a $t\bar{t}t\bar{t}$ final state. Compared to inclusive
+leading to a $t\bar{t}t\bar{t}$ production. Compared to inclusive
 $t\bar{t}$ resonance searches, this topology is significantly less
 affected by interference effects with the Standard Model background
 and provides a distinctive multi-top signature.
 
-The $t\bar{t}t\bar{t}$ final state has recently become experimentally
+The $t\bar{t}t\bar{t}$ production has recently become experimentally
 accessible. Using final states with two same-sign leptons or at least
 three leptons, the ATLAS Collaboration measured the $t\bar{t}t\bar{t}$
 production cross section to be
 $22.5^{+4.7}_{-4.3}(\mathrm{stat.})^{+4.6}_{-3.4}(\mathrm{syst.})$~fb~\cite{ATLAS:2023ajo},
 while the CMS Collaboration reported
 $17.7^{+3.7}_{-3.5}(\mathrm{stat.})^{+2.3}_{-1.9}(\mathrm{syst.})$~fb~\cite{CMS:2023ftu}.
-Both measurements are consistent with the Standard Model prediction of
-$\sigma_{t\bar{t}t\bar{t}} = 13.4^{+1.0}_{-1.8}$~fb computed at
+These measurements lie above the Standard Model prediction of
+$\sigma_{t\bar{t}t\bar{t}} = 13.4^{+1.0}_{-1.8}$~fb, computed at
 next-to-leading order with electroweak corrections and threshold
-resummation~\cite{vanBeekveld:2022hty}. A summary of the existing
-measurements is shown in Fig.~\ref{fig:fourtop-summary}.
-With the present experimental uncertainties, these measurements still
-leave room for additional contributions to $t\bar{t}t\bar{t}$ production from
-physics beyond the Standard Model.
+resummation~\cite{vanBeekveld:2022hty}, corresponding to mild upward excesses of about $1.6\sigma$ and
+$1.0\sigma$ for the ATLAS and CMS results, respectively. A summary of the existing measurements is shown in
+Fig.~\ref{fig:fourtop-summary}. Although these deviations are not
+statistically significant, they provide additional motivation to search for
+physics beyond the Standard Model that could enhance the inclusive
+$t\bar{t}t\bar{t}$ production rate.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/fourtop_summary_nov23.pdf}
-    \caption{Summary of measurements of the $t\bar{t}t\bar{t}$ production cross
-    section at $\sqrt{s}=13$~TeV by the ATLAS and CMS collaborations,
+    \caption{Summary of measurements of the \ttttsym{} production cross
+    section at \texorpdfstring{$\sqrt{s}=13$~TeV}{sqrt(s)=13 TeV} by the ATLAS and CMS collaborations,
     compared with Standard Model predictions. Taken from
     Ref.~\cite{LHCTopWGFourTopSummary}.}
     \label{fig:fourtop-summary}
 \end{figure}
 
-Beside extended Higgs sectors, the $t\bar{t}t\bar{t}$ final state also provides
+Beside extended Higgs sectors, the $t\bar{t}t\bar{t}$ production also provides
 sensitivity to more general new physics scenarios featuring new
 particles that couple preferentially to the top quark. In particular,
 top-philic simplified models, introduced in
 Section~\ref{subsec:S1/S8}, predict new mediators such as colour-octet
 scalars ($S_8$) and colour-singlet scalars ($S_1$) that can enhance multi-top production rates,
-making the $t\bar{t}t\bar{t}$ final state a particularly sensitive probe of
+making the $t\bar{t}t\bar{t}$ production a particularly sensitive probe of
 such interactions.
 
 \section{Analysis Overview}
@@ -105,13 +106,13 @@ Fig.~\ref{fig:tttt_br}.
 \node[font=\normalsize] at (-0.04,2.4) {5\%};
 
 \end{tikzpicture}
-\caption{Branching fractions of $t\bar{t}t\bar{t}$ final states classified by the number of leptonic $W$ boson decays.}
+\caption{Branching fractions of \ttttsym{} productions classified by the number of leptonic $W$ boson decays.}
 \label{fig:tttt_br}
 \end{figure}
 
 Final states with two same-sign leptons or multiple leptons (2LSS/ML) provide
 excellent background suppression and have been used in searches for
-heavy Higgs bosons in $t\bar{t}t\bar{t}$ final states by the ATLAS~\cite{2023_SSML_4top} and CMS~\cite{CMS-TOP-18-003}
+heavy Higgs bosons in $t\bar{t}t\bar{t}$ productions by the ATLAS~\cite{2023_SSML_4top} and CMS~\cite{CMS-TOP-18-003}
 collaborations. These channels correspond to relatively
 small branching fractions. Final states containing one isolated lepton
 or two opposite-sign leptons (1L/2LOS) have substantially larger branching
@@ -139,7 +140,7 @@ background arising from $t\bar{t}$ production in association with
 additional jets. This background is modelled using a data-driven normalisation and
 multidimensional kinematic corrections based on neural networks.
 
-To further exploit the complex event topology of $t\bar{t}t\bar{t}$ final states,
+To further exploit the complex event topology of $t\bar{t}t\bar{t}$ production,
 a multivariate analysis strategy based on a graph neural network (GNN)
 is employed to enhance the discrimination between signal and
 background. The signal extraction is performed through a profile
@@ -276,13 +277,22 @@ leading to a progressively broader resonance structure at higher masses.
 \end{table}
 
 Possible interference effects between the BSM signal process and the
-Standard Model $t\bar{t}t\bar{t}$ production arise due to the identical final state.
-Dedicated studies indicate that, within the sensitivity of the present analysis,
-the impact of such interference effects on the signal acceptance and on the
-observables used in the analysis is limited~\cite{Orlando:2258130}.
-They are therefore not explicitly included in the signal modelling,
-and the signal is treated as an incoherent contribution on top of the
-Standard Model background.
+Standard Model $t\bar{t}t\bar{t}$ production arise because the two
+contributions can have identical initial- and final-state partons.
+For the $t\bar{t}H/A$ signals considered in this analysis, with
+$H/A\to t\bar{t}$, such effects may therefore occur with the non-resonant
+Standard Model four-top background. Dedicated studies relevant for this
+analysis found that, at parton level, interference effects are at most of
+the order of 20\% in the studied distributions, with the largest impact
+observed in the invariant mass distribution of the top-quark pair from
+the heavy-boson decay, particularly for large-width scenarios with total
+widths up to about $100~\mathrm{GeV}$~\cite{Orlando:2258130}. Other
+kinematic observables, closer to those used in the final analysis, were
+found to be less affected. Given the limited impact observed at truth
+level and the sensitivity of the present analysis, interference effects
+are not explicitly included in the signal modelling, and the signal is
+treated as an incoherent contribution added on top of the Standard Model
+background.
 
 The signal samples are normalised to a cross section of 12~fb, corresponding to 
 the excess between the observed $t\bar{t}t\bar{t}$ production cross section and the Standard Model prediction.
@@ -362,7 +372,7 @@ search.
 \section{Summary}
 \label{sec:conclusion}
 
-This chapter presents a search for heavy resonances decaying to top-quark pairs in $t\bar{t}t\bar{t}$ final states using the full Run~2 dataset recorded by the ATLAS experiment at $\sqrt{s}=13$~TeV, corresponding to an integrated luminosity of 139~fb$^{-1}$. 
+This chapter presents a search for heavy resonances decaying to top-quark pairs in $t\bar{t}t\bar{t}$ productions using the full Run~2 dataset recorded by the ATLAS experiment at $\sqrt{s}=13$~TeV, corresponding to an integrated luminosity of 139~fb$^{-1}$. 
 Events with one lepton or two opposite-sign leptons and high jet multiplicities are analysed, with the dominant $t\bar{t}+\text{jets}$ background controlled through dedicated data-driven normalisation and multidimensional kinematic corrections based on neural networks. 
 A mass-parameterised Graph Neural Network is employed to optimise the signal-to-background discrimination.
 
@@ -371,7 +381,7 @@ The combined limits of 14~fb and 5.0~fb for resonance masses of 400~GeV and 1000
 The results are further interpreted in the context of the $S_{8}$ pair production scenarios, excluding $S_{8}$ masses up to 1.3~TeV.
 
 While these results establish competitive constraints on top-philic new physics scenarios, the sensitivity in the high-mass region remains primarily limited by the available dataset. 
-The HL-LHC, expected to deliver up to 3~ab$^{-1}$ per experiment at $\sqrt{s}=14$~TeV, will substantially extend the reach of heavy-resonance searches in $t\bar{t}t\bar{t}$ final states. 
+The HL-LHC, expected to deliver up to 3~ab$^{-1}$ per experiment at $\sqrt{s}=14$~TeV, will substantially extend the reach of heavy-resonance searches in $t\bar{t}t\bar{t}$ productions. 
 Projection studies indicate that cross-section limits below 1~fb can be achieved for most resonances with masses beyond 1~TeV, with particularly strong sensitivity to coloured scalars. 
 For benchmark $H/A$ signals near the projected sensitivity, discovery-level significances become achievable with the full HL-LHC dataset.
 

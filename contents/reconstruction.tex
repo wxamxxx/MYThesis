@@ -280,6 +280,37 @@ Fig.~\ref{fig:reco-egamma-electron-id-eff}.
   \label{fig:reco-egamma-electron-id-eff}
 \end{figure}
 
+\subsection{Charge Identification and Misidentification}
+
+For reconstructed electrons, the electric charge is determined from the
+curvature of the associated ID track in the solenoidal magnetic field.
+In an ideal detector, the sign of the track curvature would provide an
+unambiguous charge assignment.
+In practice, however, the charge measurement can be degraded by substantial
+bremsstrahlung in the detector material, which may alter the fitted track
+parameters, spoil the quality of the track--cluster match, or lead to an
+incorrect association between the electron candidate and a reconstructed track.
+Additional contributions arise from asymmetric photon conversions and other
+material interactions that complicate the trajectory reconstruction and increase
+the probability of assigning the wrong charge to the electron candidate.
+
+Although the probability of charge misidentification is generally small, it is
+phenomenologically important in analyses that rely on same-sign lepton final
+states, where even a small wrong-sign rate can generate a non-negligible
+background from otherwise abundant opposite-sign processes.
+For this reason, ATLAS complements the standard likelihood-based electron
+identification with an additional dedicated charge-identification selection.
+In Run~2, this selection is implemented through a multivariate discriminant
+that combines tracking and calorimeter information to distinguish electrons with
+correctly and incorrectly assigned charges~\cite{ATLASElectronRecoID2019,Aad:2019tso}.
+This additional requirement is commonly referred to as the Electron Charge ID
+Selector (ECIDS) and is applied on top of the standard reconstructed and
+identified electron candidate to suppress charge-misidentified backgrounds.
+
+% In this thesis, the exact operating point and the channel-specific use of the
+% ECIDS requirement are treated as part of the analysis-level electron
+% definition and are discussed in the corresponding analysis chapter.
+
 \subsection{Isolation}
 
 Isolation requirements are applied to suppress non-prompt electrons, such as those
